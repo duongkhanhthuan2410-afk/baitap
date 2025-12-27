@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng ký CLB Văn học</title>
+	<link rel="stylesheet" href="style.css">
+
+
+    
+</head>
+
+<body>
+    <h1>Biểu mẫu đăng ký CLB Văn học</h1>
+
+    <form onsubmit="handleSubmit(); return false;">
+        <div class="row">
+            <label>Họ và tên:</label>
+            <input type="text" required>
+        </div>
+
+        <div class="row">
+            <label>Lớp:</label>
+            <input type="text" required>
+        </div>
+
+        <div class="row">
+            <label>Email:</label>
+            <input type="email" required>
+        </div>
+
+        <div class="row">
+            <label>Giới tính:</label>
+            <span class="radio-group">
+                <input type="radio" name="gt" required> Nam
+                <input type="radio" name="gt"> Nữ
+            </span>
+        </div>
+
+        <div class="row">
+            <label>Sở thích:</label>
+            <select required>
+                <option value="">-- Chọn --</option>
+                <option>Đọc sách</option>
+                <option>Viết thơ</option>
+                <option>Viết truyện</option>
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="btn">Đăng ký</button>
+            <button type="reset" class="btn">Nhập lại</button>
+            <a href="index.html" class="btn">Quay lại</a>
+        </div>
+<div class="success" id="successMsg">
+            ✅ Đăng ký thành công! Đang quay về trang chủ...
+        </div>
+    </form>
+
+    <script>
+        function handleSubmit() {
+
+            document.getElementById("successMsg").style.display = "block";
+
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
